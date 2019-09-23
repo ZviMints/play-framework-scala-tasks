@@ -1,4 +1,35 @@
 @()
-@main("Welcome to Play") {
-  <h1>Welcome to Play!</h1>
+@main("Welcome to Zvi Mints App") {
+  <h1>Welcome!</h1>
+  <h3>Zvi Mints first application using play framework with scala</h3>
+  <h3>Based on: <a href=""></a></h3>
+  <hr>
+
+  <!---action="need to add in route"--->
+  <h1>This form is using GET</h1>
+  <form method="get" action="validateLoginGET">
+    Username: <input type="text" name="username" placeholder="username"/>
+    <br/>
+    Password: <input type="password" name="password" placeholder ="password"/>
+    <br/>
+    <button type="submit">Submit</button>
+  </form>
+  <hr>
+  <h1>This form is using POST</h1>
+  <form method="post" action="@routes.MyController.validateLogingPOST()">
+    Username: <input type="text" name="username" placeholder="username"/>
+    <br/>
+    Password: <input type="password" name="password" placeholder ="password"/>
+    <br/>
+    <button type="submit">Submit</button>
+  </form>
+  <hr>
+  <h1>Create User</h1>
+  <form method="post" action="@routes.MyController.CreateUser()">
+    Username: <input type="text" name="username" placeholder="username"/>
+    <br/>
+    Password: <input type="password" name="password" placeholder ="password"/>
+    <br/>
+    <button type="submit">Submit</button>
+  </form>
 }
