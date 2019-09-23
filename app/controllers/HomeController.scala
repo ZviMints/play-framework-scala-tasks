@@ -7,7 +7,9 @@ import play.api.mvc._
 class HomeController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
 
   // Index Method for './'
-  def index() = Action { implicit request: Request[AnyContent] =>
-    Ok(views.html.MyMainView()) // Redirect './' to views/MyMainView
+  def index() = Action {
+    Ok(views.html.index()) // Redirect './' to views/index
   }
+
+
 }
